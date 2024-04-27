@@ -1,0 +1,9 @@
+spring:
+    application:
+        name: bkg-adapter
+        
+logging:
+    level:
+        com:
+            josko: DEBUG
+            

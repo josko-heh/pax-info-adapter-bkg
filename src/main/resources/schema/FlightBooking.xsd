@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   elementFormDefault="qualified">
+
+	<xs:complexType name="Passenger">
+		<xs:sequence>
+			<xs:element name="firstName" type="xs:string"/>
+			<xs:element name="lastName" type="xs:string"/>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="gender" type="xs:string"/>
+			<xs:element name="dateOfBirth" type="xs:date"/>
+			<xs:element name="address" type="Address"/>
+			<xs:element name="preferredLanguage" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Address">
+		<xs:sequence>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="zipCode" type="xs:string"/>
+			<xs:element name="streetAndNumber" type="xs:string"/>
+			<xs:element name="country" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Ticket">
+		<xs:sequence>
+			<xs:element name="ticketNumber" type="xs:string"/>
+			<xs:element name="ticketType" type="xs:string"/>
+			<xs:element name="ticketStatus" type="xs:string"/>
+			<xs:element name="carrier" type="xs:string"/>
+			<xs:element name="flightNumber" type="xs:string"/>
+			<xs:element name="departureDate" type="xs:date"/>
+			<xs:element name="departureTime" type="xs:string"/>
+			<xs:element name="arrivalDate" type="xs:date"/>
+			<xs:element name="arrivalTime" type="xs:string"/>
+			<xs:element name="departureAirport" type="xs:string"/>
+			<xs:element name="arrivalAirport" type="xs:string"/>
+			<xs:element name="departureTerminal" type="xs:string"/>
+			<xs:element name="arrivalTerminal" type="xs:string"/>
+			<xs:element name="boardingGate" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="flightBooking">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="passenger" type="Passenger"/>
+				<xs:element name="ticketDetails" type="Ticket"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
