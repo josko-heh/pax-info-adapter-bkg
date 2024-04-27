@@ -6,4 +6,12 @@ logging:
     level:
         com:
             josko: DEBUG
+
+bookings:
+    jms:
+        source: jms:queue:flightBookings?maxConcurrentConsumers=4&concurrentConsumers=2
+passengers:
+    update:
+        jms:
+            target: jms:queue:passenger.update
             

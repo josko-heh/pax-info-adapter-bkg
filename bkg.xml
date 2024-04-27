@@ -1,34 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <flightBooking>
 	<passenger>
-			<firstName>John</firstName>
-			<lastName>Doe</lastName>
-			<title>Mr.</title>
-			<gender>Male</gender>
-			<dateOfBirth>1990-01-01</dateOfBirth>
-			<address>
-				<city>New York</city>
-				<zipCode>10001</zipCode>
-				<streetAndNumber>123 Main St</streetAndNumber>
-				<country>NY</country>
-			</address>
-			<preferredLanguage>EN</preferredLanguage>
+		<firstName>John</firstName>
+		<lastName>Doe</lastName>
+		<title>Mr.</title>
+		<gender>Male</gender>
+		<dateOfBirth>010190</dateOfBirth>
+		<address>
+			<city>New York</city>
+			<zipCode>10001</zipCode>
+			<streetAndNumber>123 Main St</streetAndNumber>
+			<country>US</country>
+		</address>
+		<preferredLanguage>EN</preferredLanguage>
 	</passenger>
 	<ticketDetails>
-		<ticket>
-			<ticketNumber>ABC1234567890</ticketNumber>
-			<ticketType>Economy</ticketType>
-			<ticketStatus>Confirmed</ticketStatus>
-			<carrier>ABC</carrier>
-			<flightNumber>123</flightNumber>
-			<departureDate>2024-04-30</departureDate>
-			<departureTime>10:00</departureTime>
-			<arrivalDate>2024-04-30</arrivalDate>
-			<arrivalTime>12:00</arrivalTime>
-			<departureAirport>JFK</departureAirport>
-			<arrivalAirport>LAX</arrivalAirport>
-			<departureTerminal>T1</departureTerminal>
-			<arrivalTerminal>T3</arrivalTerminal>
-			<boardingGate>G5</boardingGate>
-		</ticket>
+		<ticketNumber>ABC1234567890</ticketNumber>
+		<ticketType>Economy</ticketType>
+		<ticketStatus>Confirmed</ticketStatus>
+		<carrier>ABC</carrier>
+		<flightNumber>123</flightNumber>
+		<departureDate>300422</departureDate>
+		<departureTime>08:00</departureTime>
+		<arrivalDate>300422</arrivalDate>
+		<arrivalTime>10:00</arrivalTime>
+		<departureAirport>JFK</departureAirport>
+		<arrivalAirport>LAX</arrivalAirport>
+		<departureTerminal>T1</departureTerminal>
+		<arrivalTerminal>T3</arrivalTerminal>
+		<boardingGate>G5</boardingGate>
 	</ticketDetails>
 </flightBooking>
