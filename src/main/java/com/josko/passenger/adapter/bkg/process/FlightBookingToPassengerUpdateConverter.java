@@ -4,6 +4,7 @@ import com.josko.passenger.adapter.bkg.dto.FlightBooking;
 import com.josko.passenger.update.dto.PassengerUpdate;
 import com.josko.passenger.update.dto.keys.KeyDTO;
 import com.josko.passenger.update.dto.keys.TicketNumberKeyDTO;
+import com.josko.passenger.update.slices.BookingData;
 import com.josko.passenger.update.slices.PassengerDetailsData;
 import com.josko.passenger.update.slices.Slice;
 import org.springframework.stereotype.Component;
@@ -17,6 +18,7 @@ import java.util.UUID;
 
 import static com.josko.passenger.adapter.bkg.Definitions.DS_NAME;
 import static com.josko.passenger.update.dto.keys.KeyDTO.Type.TICKET_NUMBER;
+import static com.josko.passenger.update.slices.SliceData.Type.BOOKING;
 import static com.josko.passenger.update.slices.SliceData.Type.DETAILS;
 
 @Component
@@ -31,6 +33,8 @@ public class FlightBookingToPassengerUpdateConverter {
 		passengerUpdate.setUpdateTs(Instant.now());
 		
 		// Map keys
+		List<KeyDTO> keys = new ArrayList<>();
+		
 		TicketNumberKeyDTO ticketNumberKeyDTO = TicketNumberKeyDTO.builder()
 				.type(TICKET_NUMBER)
 				.carrier(bkg.getTicketDetails().getCarrier())
@@ -39,11 +43,12 @@ public class FlightBookingToPassengerUpdateConverter {
 				.ticketNumber(bkg.getTicketDetails().getTicketNumber())
 				.build();
 		
-		List<KeyDTO> keys = new ArrayList<>();
 		keys.add(ticketNumberKeyDTO);
 		passengerUpdate.setKeys(keys);
 
 		// Map slices
+		List<Slice> slices = new ArrayList<>();
+		
 		Slice<PassengerDetailsData> detailsSlice = Slice.<PassengerDetailsData>builder()
 				.name(DETAILS)
 				.content(PassengerDetailsData.builder()
@@ -61,8 +66,20 @@ public class FlightBookingToPassengerUpdateConverter {
 				.updateTs(Instant.now())
 				.build();
 		
-		List<Slice> slices = new ArrayList<>();
 		slices.add(detailsSlice);
+
+		Slice<BookingData> bookingDataSlice = Slice.<BookingData>builder()
+				.name(BOOKING)
+				.content(BookingData.builder()
+						.locator(bkg.getLocator())
+						.tattoo(bkg.getTattoo())
+						.pointOfSale(bkg.getPointOfSale())
+						.build())
+				.updateTs(Instant.now())
+				.build();
+		
+		slices.add(bookingDataSlice);
+		
 		passengerUpdate.setSlices(slices);
 
 		return passengerUpdate;

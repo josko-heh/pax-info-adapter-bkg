@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flightBooking>
 	<passenger>
-		<firstName>John</firstName>
-		<lastName>Doe</lastName>
-		<title>Mr.</title>
-		<gender>Male</gender>
-		<dateOfBirth>010190</dateOfBirth>
+		<firstName>Ivana ddd</firstName>
+		<lastName>Jo d</lastName>
+		<gender>Female</gender>
+		<dateOfBirth>060190</dateOfBirth>
 		<address>
 			<city>New York</city>
 			<zipCode>10001</zipCode>
-			<streetAndNumber>123 Main St</streetAndNumber>
+			<streetAndNumber>12 Main St</streetAndNumber>
 			<country>US</country>
 		</address>
-		<preferredLanguage>EN</preferredLanguage>
+		<preferredLanguage>HR</preferredLanguage>
 	</passenger>
 	<ticketDetails>
-		<ticketNumber>ABC1234567890</ticketNumber>
+		<ticketNumber>AAFQQ34567890</ticketNumber>
 		<ticketType>Economy</ticketType>
 		<ticketStatus>Confirmed</ticketStatus>
 		<carrier>ABC</carrier>
@@ -30,4 +29,6 @@
 		<arrivalTerminal>T3</arrivalTerminal>
 		<boardingGate>G5</boardingGate>
 	</ticketDetails>
+	<locator>SW62B1</locator>
+	<pointOfSale>ZAG</pointOfSale>
 </flightBooking>
