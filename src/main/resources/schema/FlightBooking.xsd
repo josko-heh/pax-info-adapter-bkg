@@ -46,7 +46,7 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="passenger" type="Passenger"/>
-				<xs:element name="ticketDetails" type="Ticket"/>
+				<xs:element name="ticketDetails" type="Ticket" minOccurs="0"/>
 				<xs:element name="locator" type="xs:string"/>
 				<xs:element name="tattoo" type="xs:int" minOccurs="0"/>
 				<xs:element name="pointOfSale" type="xs:string" minOccurs="0"/>
