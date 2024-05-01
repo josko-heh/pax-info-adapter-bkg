@@ -7,7 +7,7 @@
 
     <groupId>com.josko.passenger</groupId>
     <artifactId>adapter-bkg</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>Booking Adapter</name>
 
     <parent>
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>com.josko.passenger</groupId>
             <artifactId>passenger-interface</artifactId>
-            <version>1.0.0</version>
+            <version>1.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
     
